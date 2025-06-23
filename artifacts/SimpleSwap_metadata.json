@@ -1,0 +1,372 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "tokenA",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "tokenB",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountADesired",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountBDesired",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountAMin",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountBMin",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "addLiquidity",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountA",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountB",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "liquidity",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountIn",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "reserveIn",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "reserveOut",
+						"type": "uint256"
+					}
+				],
+				"name": "getAmountOut",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountOut",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "tokenA",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "tokenB",
+						"type": "address"
+					}
+				],
+				"name": "getPrice",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "pairs",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "reserveA",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "reserveB",
+						"type": "uint256"
+					},
+					{
+						"internalType": "contract LiquidityToken",
+						"name": "liquidityToken",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "tokenA",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "tokenB",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "liquidity",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountAMin",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountBMin",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "removeLiquidity",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountA",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountB",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountIn",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountOutMin",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address[]",
+						"name": "path",
+						"type": "address[]"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "swapExactTokensForTokens",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "amounts",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"addLiquidity(address,address,uint256,uint256,uint256,uint256,address,uint256)": {
+					"params": {
+						"amountADesired": "Cantidad deseada de token A",
+						"amountAMin": "Mínimo aceptable de token A",
+						"amountBDesired": "Cantidad deseada de token B",
+						"amountBMin": "Mínimo aceptable de token B",
+						"deadline": "Tiempo límite de validez",
+						"to": "Dirección que recibe los LP tokens",
+						"tokenA": "Dirección del token A",
+						"tokenB": "Dirección del token B"
+					},
+					"returns": {
+						"amountA": "Cantidad final de token A usada",
+						"amountB": "Cantidad final de token B usada",
+						"liquidity": "Tokens de liquidez emitidos"
+					}
+				},
+				"getAmountOut(uint256,uint256,uint256)": {
+					"params": {
+						"amountIn": "Amount of input tokens",
+						"reserveIn": "Input reservation",
+						"reserveOut": "Output reservation"
+					},
+					"returns": {
+						"amountOut": "Tokens to be received"
+					}
+				},
+				"getPrice(address,address)": {
+					"params": {
+						"tokenA": "Address of token A",
+						"tokenB": "Address of token B"
+					},
+					"returns": {
+						"price": "Price in units with 18 decimal places"
+					}
+				},
+				"removeLiquidity(address,address,uint256,uint256,uint256,address,uint256)": {
+					"params": {
+						"amountAMin": "Minimum acceptable token A amount",
+						"amountBMin": "Minimum acceptable token B amount",
+						"deadline": "Validity deadline",
+						"liquidity": "Amount of LP tokens to burn",
+						"to": "Token receiving address",
+						"tokenA": "Token A address",
+						"tokenB": "Token B address"
+					},
+					"returns": {
+						"amountA": "Token A returned",
+						"amountB": "Token B returned"
+					}
+				},
+				"swapExactTokensForTokens(uint256,uint256,address[],address,uint256)": {
+					"params": {
+						"amountIn": "Number of input tokens",
+						"amountOutMin": "Minimum acceptable output amount",
+						"deadline": "Validity limit",
+						"path": "Array with token addresses (2 elements)",
+						"to": "Receiving address of the output token"
+					},
+					"returns": {
+						"amounts": "Array with input and output amounts"
+					}
+				}
+			},
+			"title": "Uniswap V2-style decentralized AMM contract",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"addLiquidity(address,address,uint256,uint256,uint256,uint256,address,uint256)": {
+					"notice": "Agrega liquidez a un par y emite tokens LP"
+				},
+				"getAmountOut(uint256,uint256,uint256)": {
+					"notice": "Calculates the expected output amount for a swap"
+				},
+				"getPrice(address,address)": {
+					"notice": "Returns the price of tokenA in terms of tokenB"
+				},
+				"removeLiquidity(address,address,uint256,uint256,uint256,address,uint256)": {
+					"notice": "Allows liquidity withdrawals and receipts of underlying tokens"
+				},
+				"swapExactTokensForTokens(uint256,uint256,address[],address,uint256)": {
+					"notice": "Exchanges a fixed amount of one token for another"
+				}
+			},
+			"notice": "Allows swapping tokens, adding/removing liquidity, and checking prices",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"SimpleSwap_Flatten_Manual.sol": "SimpleSwap"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"SimpleSwap_Flatten_Manual.sol": {
+			"keccak256": "0x5f7b1ced870e489ce412aa516354cce413c7c7e20287b3ce6b7d72a5dc84584f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://00622157b1ecca6447681191dd4bb38f08d1626e614dcac53be8f5f14bcfc928",
+				"dweb:/ipfs/QmX8nQTgJgwphYrNZkpTWExD1wjukXWuFYjwnQcSBFQo57"
+			]
+		}
+	},
+	"version": 1
+}
